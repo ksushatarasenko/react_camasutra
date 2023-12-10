@@ -2,8 +2,8 @@
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 60px 1fr;
-    grid-template-columns: 2fr 8fr;
+    grid-template-rows: 20% 9fr;
+    grid-template-columns: 2fr 10fr;
     gap: 10px;
     grid-template-areas: 
         'header header'
@@ -13,9 +13,7 @@
     grid-area: header;
     background-color: rgb(2, 19, 172);
 }
-.header img{
-    width: 20px;
-}
+
 .nav{
     grid-area: nav;
     background-color: rgb(9, 3, 130);

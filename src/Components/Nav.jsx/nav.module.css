@@ -1,0 +1,15 @@
+.wrapper{
+    padding: 5%;
+}
+.item a{
+    color: azure;
+    text-decoration: none;
+    line-height: 3vh;
+    font-size: 18px;
+}
+.item{
+    width: 25%;
+    text-align: center;
+    margin: 0 auto;
+    
+}

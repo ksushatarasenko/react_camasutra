@@ -1,9 +1,17 @@
 import React from 'react'
+import logo from './image/logo.png'
+import head from './header.module.css'
 
 function Header() {
   return (
     <div className='header'>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAHXPluq6GtTRPDIHRv5kJPy86uFjp5sO7hg&usqp=CAU" alt="logo" />
+      <div className={head.wrapper}>
+        <div className={head.image}>
+          <img src={logo} alt="logo" />
+        </div>
+        
+      </div>
+        
         
     </div>
   )
