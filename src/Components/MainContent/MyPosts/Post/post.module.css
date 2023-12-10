@@ -1,0 +1,12 @@
+.wrapper{
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    margin: 1% 0;
+    padding: 1%;
+    color: azure;
+}
+.image img{
+    width: 40px;
+    border-radius: 50%;
+}
