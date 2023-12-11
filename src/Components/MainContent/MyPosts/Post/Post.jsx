@@ -2,18 +2,17 @@ import React from 'react'
 import avatar from './image/avatar.jpg'
 import post from './post.module.css'
 
-function Post() {
+function Post(props) {
   return (
     <div className={post.wrapper}>
         <div className={post.image}>
             <img src={avatar} alt="" />
+             <p>like - {props.countLike}</p>
         </div>
         <div className={post.post}>
-             Post
+             {props.message}
         </div> 
-        <div>
-            <button>like</button>
-        </div>    
+           
     </div>
   )
 }
