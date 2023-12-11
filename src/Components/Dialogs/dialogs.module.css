@@ -1,1 +1,8 @@
 
+.wrapper{
+    display: grid;
+    grid-template-columns: 3fr 10fr;
+    background-color: rgb(68, 68, 244);
+    padding: 2%;
+    font-size: 20px;
+}

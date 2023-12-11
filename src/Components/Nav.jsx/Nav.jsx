@@ -1,16 +1,20 @@
 import React from 'react'
 import nav from './nav.module.css'
+import '../../style.css'
+import { NavLink } from 'react-router-dom'
 
 function Nav() {
   return (
     <div className='nav'>
-        <div className={nav.wrapper}>
-            <div className={nav.item}><a href="#">Profile</a></div>
-            <div className={nav.item}><a href="#">Message</a></div>
-            <div className={nav.item}><a href="#">News</a></div>
-            <div className={nav.item}><a href="#">Music</a></div>
-            <div className={nav.item}><a href="#">Settings</a></div>
-        </div>
+        <div className={nav.wrapper }>
+          <div className={nav.item}>
+            <NavLink to='/' className={({isActive})=> isActive ? 'active' : ''}>Profile</NavLink>
+            <NavLink  to='/dialogs' activeClassName={nav.active}>Message</NavLink>
+            <NavLink to='/news' activeClassName={nav.active}>News</NavLink>
+            <NavLink to='/music' activeClassName={nav.navLinkActive}>Music</NavLink>
+            <NavLink to='/settings' className={nav.active}>Settings</NavLink>
+          </div>
+        </div>  
     </div>
   )
 }

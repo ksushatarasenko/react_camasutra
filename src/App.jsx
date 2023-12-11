@@ -4,25 +4,25 @@ import Nav from './Components/Nav.jsx/Nav'
 import './style.css'
 import Profile from './Components/MainContent/Profile'
 import Dialogs from './Components/Dialogs/Dialogs'
-import { BrowserRouter as Router,
-          Routes, Route} from 'react-router-dom'    
+import News from './Components/News/News'
+import Music from './Components/Music/Music'
+import { BrowserRouter,Routes, Route} from 'react-router-dom'    
 
 export class App extends Component {
   render() {
     return (
       <div className='wrapper'>
-        <Router>
+        <BrowserRouter>
+          <Header/>
           <Nav/>
-          <Routes>
-            <Route patch=''/>
-          </Routes>
-        </Router>
-        <Header/>
-        
-        <div>
-          <Profile/>
-          <Dialogs/>
-        </div>
+            <Routes>
+              <Route path='/' element={<Profile/>}/>
+              <Route path='/dialogs' element={<Dialogs/>}/>
+              <Route path='/news' element={<News/>}/>
+              <Route path='/music' element={<Music/>}/>
+              <Route path='/settings' element={<Dialogs/>}/>
+            </Routes>                  
+        </BrowserRouter>
         
       </div>
     )
