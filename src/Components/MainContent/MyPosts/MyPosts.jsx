@@ -6,7 +6,7 @@ function MyPosts() {
   return (
     <div className={posts.wrapper}>
         My posts
-        <div>
+        <div className={posts.postBlock}>
             <textarea name="" id="" cols="30" rows="3"></textarea>
             <button>Add Post</button>
             <button>Remove</button>
