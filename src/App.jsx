@@ -8,16 +8,16 @@ import News from './Components/News/News'
 import Music from './Components/Music/Music'
 import { BrowserRouter,Routes, Route} from 'react-router-dom'    
 
-export class App extends Component {
-  render() {
+function App(props) {
+  
     return (
       <div className='wrapper'>
         <BrowserRouter>
           <Header/>
           <Nav/>
             <Routes>
-              <Route path='/' element={<Profile/>}/>
-              <Route path='/dialogs/*' element={<Dialogs/>}/>
+              <Route path='/' element={<Profile postData={props.postData}/>}/>
+              <Route path='/dialogs/*' element={<Dialogs dialogsItem={props.dialogsItem} messageData={props.messageData}/>}/>
               <Route path='/news' element={<News/>}/>
               <Route path='/music' element={<Music/>}/>
               <Route path='/settings' element={<Dialogs/>}/>
@@ -26,7 +26,7 @@ export class App extends Component {
         
       </div>
     )
-  }
+  
 }
 
 export default App

@@ -1,24 +1,18 @@
 import React from 'react'
 import posts from './myPosts.module.css'
 import Post from './Post/Post'
+import AddPost from '../AddPost/AddPost'
 
-function MyPosts() {
+function MyPosts(props) {
+
+  
   return (
     <div className={posts.wrapper}>
-        My posts
-        <div className={posts.postBlock}>
-            <textarea name="" id="" cols="30" rows="3"></textarea>
-            <button>Add Post</button>
-            <button>Remove</button>
-        </div>
-        <div>
+        <AddPost/>
             New post
-        </div>
-        <Post message='Hi, how are you?' countLike='27'/>
-        <Post message='All, ok, and you?' countLike='7'/>
-        <Post message='What do you like?' countLike='11'/>
-        <Post message='I like, sleep' countLike='20'/>
-        <Post message='Bye...' countLike='15'/>        
+        {props.postData.map(item=>(
+          <Post message={item.message} id={item.id} countLike={item.countLike}/>
+        ))}   
     </div>
   )
 }
