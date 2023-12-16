@@ -10,7 +10,8 @@ let state = {
       {id:5, message:'I want a pizza', countLike:20},
       {id:6, message:'Bye...', countLike:7},
     
-    ]
+    ],
+    newPostText: ' ',
   },
   dialogsPage:{
     dialogsItem:[
@@ -35,16 +36,22 @@ let state = {
     ],
   }, 
 }
-    
-export let addPost = (postMessage) => {
+   
+window.state = state;
+
+export let addPost = () => {
   let newPost ={
     id:5,
-    message: postMessage,
+    message: state.profilePage.newPostText,
     countLike: 0,
   }
-
   state.profilePage.postData.push(newPost);
+  state.profilePage.newPostText = '';
   rerenderEntireTree(state);
 }
 
+export let updateNewPostText = (newText) => {
+  state.profilePage.newPostText = newText;
+  rerenderEntireTree(state);
+}
 export default state;

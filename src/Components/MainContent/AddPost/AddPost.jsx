@@ -5,10 +5,13 @@ function AddPost(props) {
   let textAddPost = React.createRef();
 
   const addPost = () => {
+    props.addPost();
+  }
+
+  let onPostChange = () => {
     let text = textAddPost.current.value;
-    console.log(text)
-    props.addPost(text);
-    textAddPost.current.value = '';
+    props.updateNewPostText(text);
+    
   }
 
   return (
@@ -16,7 +19,10 @@ function AddPost(props) {
         <h3>Add new posts</h3>
         <div className={posts.postBlock}>
           <div>
-            <textarea name="" id="" cols="30" rows="3" ref={textAddPost}></textarea>
+            <textarea name="" id="" cols="30" rows="3" 
+              ref={textAddPost} 
+              value={props.newPostText}
+              onChange={onPostChange}></textarea>
           </div>           
             <button onClick={addPost}>Add Post</button>
         </div>
