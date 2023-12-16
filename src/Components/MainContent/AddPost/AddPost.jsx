@@ -1,16 +1,24 @@
 import posts from '../profile.module.css'
 import React from 'react'
 
-function AddPost() {
+function AddPost(props) {
+  let textAddPost = React.createRef();
+
+  const addPost = () => {
+    let text = textAddPost.current.value;
+    console.log(text)
+    props.addPost(text);
+    textAddPost.current.value = '';
+  }
+
   return (
     <div>
-        <h3>My posts</h3>
+        <h3>Add new posts</h3>
         <div className={posts.postBlock}>
           <div>
-            <textarea name="" id="" cols="30" rows="3"></textarea>
+            <textarea name="" id="" cols="30" rows="3" ref={textAddPost}></textarea>
           </div>           
-            <button>Add Post</button>
-            <button>Remove</button>
+            <button onClick={addPost}>Add Post</button>
         </div>
        
     </div>

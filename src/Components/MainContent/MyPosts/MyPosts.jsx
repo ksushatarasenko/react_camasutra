@@ -8,10 +8,10 @@ function MyPosts(props) {
   
   return (
     <div className={posts.wrapper}>
-        <AddPost/>
-            New post
+        <AddPost addPost={props.addPost}/>
         {props.postData.map(item=>(
-          <Post message={item.message} id={item.id} countLike={item.countLike}/>
+          <Post 
+            message={item.message} id={item.id} countLike={item.countLike}/>
         ))}   
     </div>
   )

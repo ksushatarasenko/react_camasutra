@@ -16,7 +16,7 @@ function App(props) {
           <Header/>
           <Nav/>
             <Routes>
-              <Route path='/' element={<Profile postData={props.state.profilePage.postData}/>}/>
+              <Route path='/' element={<Profile postData={props.state.profilePage.postData} addPost={props.addPost}/>}/>
               <Route path='/dialogs/*' element={<Dialogs dialogsItem={props.state.dialogsPage.dialogsItem} messageData={props.state.dialogsPage.messageData}/>}/>
               <Route path='/news' element={<News/>}/>
               <Route path='/music' element={<Music/>}/>
