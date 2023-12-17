@@ -16,8 +16,16 @@ function App(props) {
           <Header/>
           <Nav/>
             <Routes>
-              <Route path='/' element={<Profile profilePage={props.state.profilePage} addPost={props.addPost} updateNewPostText={props.updateNewPostText}/>}/>
-              <Route path='/dialogs/*' element={<Dialogs dialogsItem={props.state.dialogsPage.dialogsItem} messageData={props.state.dialogsPage.messageData}/>}/>
+              <Route path='/' element={<Profile 
+                                          profilePage={props.state.profilePage} 
+                                          addPost={props.addPost} 
+                                          updateNewPostText={props.updateNewPostText}/>}/>
+              <Route path='/dialogs/*' element={<Dialogs 
+                                          dialogsItem={props.state.dialogsPage.dialogsItem} 
+                                          messageData={props.state.dialogsPage.messageData}
+                                          newMessageText={props.state.dialogsPage.newMessageText}
+                                          addMessage={props.addMessage}
+                                          updateNewMessageText={props.updateNewMessageText}/>}/>
               <Route path='/news' element={<News/>}/>
               <Route path='/music' element={<Music/>}/>
               <Route path='/settings' element={<Dialogs/>}/>

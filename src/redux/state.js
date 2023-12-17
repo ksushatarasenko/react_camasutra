@@ -1,5 +1,8 @@
-import { rerenderEntireTree } from "../render";
+// import { rerenderEntireTree } from "../render";
 
+let rerenderEntireTree = () => {
+
+ }
 let state = {
   profilePage:{
     postData:[
@@ -27,13 +30,14 @@ let state = {
     
     messageData:[
       {id:1, text:'Hello!!'},
-      {id:1, text:'Hi, are you?'},
-      {id:1, text:'Perfect'},
-      {id:1, text:'What, are you do?'},
-      {id:1, text:'Clear and listern music, and you?'},
-      {id:1, text:'I sitt and talk you.'},
-      {id:1, text:'Goodbye...'},
+      {id:2, text:'Hi, are you?'},
+      {id:3, text:'Perfect'},
+      {id:4, text:'What, are you do?'},
+      {id:5, text:'Clear and listern music, and you?'},
+      {id:6, text:'I sitt and talk you.'},
+      {id:7, text:'Goodbye...'},
     ],
+    newMessageText:'',
   }, 
 }
    
@@ -50,8 +54,27 @@ export let addPost = () => {
   rerenderEntireTree(state);
 }
 
+export let addMessage = () => {
+  let newMessage ={
+    id:8,
+    text: '',
+  }
+  state.dialogsPage.messageData.push(newMessage);
+  state.dialogsPage.newMessageText = '';
+  rerenderEntireTree(state);
+}
+
 export let updateNewPostText = (newText) => {
   state.profilePage.newPostText = newText;
   rerenderEntireTree(state);
 }
+export let updateNewMessageText = (newMessage) => {
+  state.dialogsPage.newMessageText = newMessage;
+  rerenderEntireTree(state);
+}
+
+export const subscribe = (observer) => {
+  rerenderEntireTree = observer;
+}
+
 export default state;
