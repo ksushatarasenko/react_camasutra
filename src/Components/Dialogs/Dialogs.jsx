@@ -12,8 +12,7 @@ function Dialogs(props) {
       
         <AddMessage className={dialog.addPost}
             newMessageText={props.newMessageText}
-            updateNewMessageText={props.updateNewMessageText}
-            addMessage={props.addMessage}/>
+            dispatch={props.dispatch}/>
         <div className={dialog.page}>
           <div className={dialog.item}>
             {props.dialogsItem.map(item => (

@@ -9,9 +9,8 @@ function MyPosts(props) {
   return (
     <div className={posts.wrapper}>
         <AddPost 
-            addPost={props.addPost} 
-            newPostText={props.profilePage.newPostText} 
-            updateNewPostText={props.updateNewPostText}/>
+            dispatch={props.dispatch} 
+            newPostText={props.profilePage.newPostText}/>
 
         {props.profilePage.postData.map(item=>(
           <Post 
