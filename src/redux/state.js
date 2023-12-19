@@ -1,6 +1,6 @@
 const addPost = 'ADD-POST';
 const updateNewPost = 'UPDATE-NEW-MESSAGE-TEXT';
-const addMessage = 'ADD-MESSAGE';
+const sendMessage = 'SEND-MESSAGE';
 const updateNewMessage = 'UPDATE-NEW-MESSAGE-TEXT';
 
 let store = {
@@ -65,13 +65,10 @@ let store = {
     } else if (action.type === updateNewPost) {
       this._state.profilePage.newPostText = action.newText;
       this._callSubscriber(this._state);
-    } else if (action.type === addMessage) {
-      let newMessage = {
-        id: 8,
-        text: '',
-      }
-      this._state.dialogsPage.messageData.push(newMessage);
+    } else if (action.type === sendMessage) {
+      let body = this._state.dialogsPage.newMessageText;
       this._state.dialogsPage.newMessageText = '';
+      this._state.dialogsPage.messageData.push({id:6, text:body});
       this._callSubscriber(this._state);
     } else if (action.type === updateNewMessage) {
       this._state.dialogsPage.newMessageText = action.newMessage;
@@ -81,12 +78,10 @@ let store = {
 
 }
 
-export const addPostActionCreator = () => {
-  return {
-    type:addPost
-  }
-}
+export const addPostActionCreator = () => ({type:addPost});
+export const updateNewPostActionCreator = (text) => ({type: updateNewPost, newText: text});
 
-export const updateNewPostActionCreator = (text) => ({type: updateNewPost, newText: text})
+export const addMessageActionCreator = () => ({type:sendMessage});
+export const updateNewMessageActionCreator = (text) => ({type:updateNewMessage, body: text})
 
 export default store;

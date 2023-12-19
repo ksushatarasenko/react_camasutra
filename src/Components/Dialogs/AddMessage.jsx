@@ -1,17 +1,21 @@
+import { addMessageActionCreator, updateNewMessageActionCreator } from '../../redux/state';
 import dialog from './dialogs.module.css'
 import React from 'react'
 
-function AddMessage(props) {
-  let textAddMessage = React.createRef();
 
-  const addMessag = () => {
-    props.dispatch({type:'ADD-MESSAGE'});
+
+function AddMessage(props) {
+  let newMessageBody = props.newMessageText;
+console.log(props)
+
+  const onSendMessageClick = (text) => {
+    props.dispatch(addMessageActionCreator());
   }
 
-  let onPostChange = () => {
-    let text = textAddMessage.current.value;
+  let onNewMessageChange = (event) => {
+    let text = event.target.value;
     console.log(text)
-    props.dispatch({type:'UPDATE-NEW-MESSAGE-TEXT', newMessage: text});
+    props.dispatch(updateNewMessageActionCreator(text));
   }
 
   return (
@@ -19,12 +23,16 @@ function AddMessage(props) {
         <h3>Add new message</h3>
         <div className={dialog.postBlock}>
           <div>
-            <textarea name="" id="" cols="30" rows="3" 
-              ref={textAddMessage} 
-              value={props.newMessageText}
-              onChange={onPostChange}></textarea>
-          </div>           
-            <button onClick={addMessag}>Add Message</button>
+            <textarea 
+              // ref={textAddMessage} 
+              value={newMessageBody}
+              onChange={onNewMessageChange}
+              placeholder='Enter your message'></textarea>
+          </div> 
+          <div>
+            <button onClick={onSendMessageClick}>Send Message</button>
+          </div>          
+          
         </div>
        
     </div>
