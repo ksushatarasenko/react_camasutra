@@ -19,7 +19,7 @@ function Dialogs(props) {
           </div>
         </div>
         <AddMessage className={dialog.addPost}
-            newMessageText={props.newMessageText}
+            newMessageBody={props.newMessageBody}
             dispatch={props.dispatch}/>
     </div>
   )

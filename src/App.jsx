@@ -22,7 +22,7 @@ function App(props) {
               <Route path='/dialogs/*' element={<Dialogs 
                                           dialogsItem={props.state.dialogsPage.dialogsItem} 
                                           messageData={props.state.dialogsPage.messageData}
-                                          newMessageText={props.state.dialogsPage.newMessageText}
+                                          newMessageBody={props.state.dialogsPage.newMessageBody}
                                           dispatch={props.dispatch}/>}/>
               <Route path='/news' element={<News/>}/>
               <Route path='/music' element={<Music/>}/>

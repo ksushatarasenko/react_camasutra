@@ -5,17 +5,22 @@ import React from 'react'
 
 
 function AddMessage(props) {
-  let newMessageBody = props.newMessageText;
-console.log(props)
+    
+console.log(props.newMessageBody)
+  let newMessageBody = props.newMessageBody; 
+console.log(newMessageBody)
 
-  const onSendMessageClick = (text) => {
-    props.dispatch(addMessageActionCreator());
+  const onSendMessageClick = () => {
+    let body = props.newMessageBody;
+    props.dispatch(addMessageActionCreator(body));
   }
 
-  let onNewMessageChange = (event) => {
-    let text = event.target.value;
-    console.log(text)
-    props.dispatch(updateNewMessageActionCreator(text));
+  let onNewMessageChange = (e) => {
+    
+    let body = e.target.value;
+   
+    props.dispatch(updateNewMessageActionCreator(body));
+    console.log(body)
   }
 
   return (
@@ -23,9 +28,8 @@ console.log(props)
         <h3>Add new message</h3>
         <div className={dialog.postBlock}>
           <div>
-            <textarea 
-              // ref={textAddMessage} 
-              value={newMessageBody}
+            <textarea              
+              value={props.newMessageBody}
               onChange={onNewMessageChange}
               placeholder='Enter your message'></textarea>
           </div> 
