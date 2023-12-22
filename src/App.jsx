@@ -6,13 +6,13 @@ import Profile from './Components/MainContent/Profile'
 import Dialogs from './Components/Dialogs/Dialogs'
 import News from './Components/News/News'
 import Music from './Components/Music/Music'
-import { BrowserRouter,Routes, Route} from 'react-router-dom'    
+import { BrowserRouter,Routes, Route, HashRouter} from 'react-router-dom'    
 
 function App(props) {
   
     return (
       <div className='wrapper'>
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <HashRouter basename={process.env.PUBLIC_URL}>
           <Header/>
           <Nav/>
             <Routes>
@@ -28,7 +28,7 @@ function App(props) {
               <Route path='/music' element={<Music/>}/>
               <Route path='/settings' element={<Dialogs/>}/>
             </Routes>                  
-        </BrowserRouter>
+        </HashRouter>
         
       </div>
     )
