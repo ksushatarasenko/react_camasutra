@@ -1,4 +1,4 @@
-import { addPostActionCreator, updateNewPostActionCreator } from '../../../redux/state';
+import { addPostActionCreator, updateNewPostActionCreator } from '../../../redux/profileReducer';
 import posts from '../profile.module.css'
 import React from 'react'
 
