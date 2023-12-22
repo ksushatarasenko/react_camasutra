@@ -12,7 +12,7 @@ function App(props) {
   
     return (
       <div className='wrapper'>
-        <HashRouter basename={process.env.PUBLIC_URL}>
+        <HashRouter>
           <Header/>
           <Nav/>
             <Routes>
