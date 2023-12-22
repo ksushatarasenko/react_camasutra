@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/react_camasutra/static/css/main.d05bde10.css",
-    "main.js": "/react_camasutra/static/js/main.b6b386b5.js",
+    "main.js": "/react_camasutra/static/js/main.972c2bf4.js",
     "static/media/Blue Modern Technology LinkedIn Banner.png": "/react_camasutra/static/media/Blue Modern Technology LinkedIn Banner.d69938ce0874ada7d515.png",
     "static/media/logo.png": "/react_camasutra/static/media/logo.14f26a5b31a2e05ad4d2.png",
     "static/media/avatar.jpg": "/react_camasutra/static/media/avatar.1996e449b194ad3a2970.jpg",
     "index.html": "/react_camasutra/index.html",
     "main.d05bde10.css.map": "/react_camasutra/static/css/main.d05bde10.css.map",
-    "main.b6b386b5.js.map": "/react_camasutra/static/js/main.b6b386b5.js.map"
+    "main.972c2bf4.js.map": "/react_camasutra/static/js/main.972c2bf4.js.map"
   },
   "entrypoints": [
     "static/css/main.d05bde10.css",
-    "static/js/main.b6b386b5.js"
+    "static/js/main.972c2bf4.js"
   ]
 }
