@@ -12,7 +12,7 @@ function App(props) {
   
     return (
       <div className='wrapper'>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Header/>
           <Nav/>
             <Routes>
