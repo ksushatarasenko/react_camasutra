@@ -3,6 +3,7 @@ import avatar from './image/avatar.jpg'
 import post from './post.module.css'
 
 function Post(props) {
+  // console.log(props);
   return (
     <div className={post.wrapper}>
         <div className={post.image}>

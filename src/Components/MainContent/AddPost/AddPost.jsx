@@ -1,20 +1,19 @@
-import { addPostActionCreator, updateNewPostActionCreator } from '../../../redux/profileReducer';
 import posts from '../profile.module.css'
 import React from 'react'
 
 
 
 function AddPost(props) {
-  let textAddPost = React.createRef();
+  // console.log(props)
 
-  const addPost = () => {
-    props.dispatch(addPostActionCreator());
+  const onAddPost = () => {
+    props.addPost()
   }
 
-  let onPostChange = () => {
-    let text = textAddPost.current.value;
-    props.dispatch(updateNewPostActionCreator(text));
-
+  let onPostChange = (e) => {
+    let text = e.target.value;
+    props.updateNewPostText(text)
+   
   }
 
   return (
@@ -22,12 +21,13 @@ function AddPost(props) {
       <h3>Add new posts</h3>
       <div className={posts.postBlock}>
         <div>
-          <textarea name="" id="" cols="30" rows="3"
-            ref={textAddPost}
+          <textarea
+            cols="30" 
+            rows="3"
             value={props.newPostText}
             onChange={onPostChange}></textarea>
         </div>
-        <button onClick={addPost}>Add Post</button>
+        <button onClick={onAddPost}>Add Post</button>
       </div>
 
     </div>
