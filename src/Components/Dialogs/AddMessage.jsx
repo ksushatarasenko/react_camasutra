@@ -1,30 +1,25 @@
-import { addMessageActionCreator, updateNewMessageActionCreator } from '../../redux/dialogReducer';
+
 import dialog from './dialogs.module.css'
 import React from 'react'
 
 
 
 function AddMessage(props) {
-    
-console.log(props.newMessageBody)
-  let newMessageBody = props.newMessageBody; 
-console.log(newMessageBody)
+  console.log(props) 
+
 
   const onSendMessageClick = () => {
     let body = props.newMessageBody;
-    props.dispatch(addMessageActionCreator(body));
+    props.onSendMessage(body)
   }
 
   let onNewMessageChange = (e) => {
-    
     let body = e.target.value;
-   
-    props.dispatch(updateNewMessageActionCreator(body));
-    console.log(body)
+    props.onNewMessage(body)
   }
 
   return (
-    <div>
+    <div className={dialog.addPost}>
         <h3>Add new message</h3>
         <div className={dialog.postBlock}>
           <div>
