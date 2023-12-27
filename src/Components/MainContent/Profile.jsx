@@ -13,7 +13,6 @@ function Profile(props) {
       <div className={profile.wrapper}>
           <ProfileInfo/>
           <MyPostsContiner 
-            store={props.store}
             />
       </div>
         

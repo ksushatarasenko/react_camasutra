@@ -17,8 +17,8 @@ function App(props) {
           <Header/>
           <Nav/>
             <Routes>
-              <Route path='/' element={<Profile store={props.store}/>}/>
-              <Route path='/dialogs/*' element={<DialogsContiner store={props.store}/>}/>
+              <Route path='/' element={<Profile/>}/>
+              <Route path='/dialogs/*' element={<DialogsContiner/>}/>
               <Route path='/news' element={<News/>}/>
               <Route path='/music' element={<Music/>}/>
               <Route path='/settings' element={<Dialogs/>}/>
