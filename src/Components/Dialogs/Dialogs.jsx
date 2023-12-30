@@ -2,7 +2,7 @@ import React from 'react'
 import dialog from './dialogs.module.css'
 import DialogItems from './DialogItems'
 import Message from './Message'
-import AddMessage from './AddMessage'
+
 
 function Dialogs(props) {
   console.log('Dialogs:',props)
