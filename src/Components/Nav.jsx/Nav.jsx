@@ -10,6 +10,7 @@ function Nav() {
           <div className={nav.item}>
             <NavLink to='/' className={({isActive})=> isActive ? 'active' : ''}>Profile</NavLink>
             <NavLink  to='/dialogs' activeClassName={nav.active}>Message</NavLink>
+            <NavLink  to='/users' activeClassName={nav.active}>Users</NavLink>
             <NavLink to='/news' activeClassName={nav.active}>News</NavLink>
             <NavLink to='/music' activeClassName={nav.navLinkActive}>Music</NavLink>
             <NavLink to='/settings' className={nav.active}>Settings</NavLink>

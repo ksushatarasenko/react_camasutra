@@ -8,6 +8,7 @@ import News from './Components/News/News'
 import Music from './Components/Music/Music'
 import { Routes, Route, HashRouter} from 'react-router-dom'    
 import DialogsContiner from './Components/Dialogs/DialogsContiner'
+import UsersContiner from './Components/users/UsersContiner'
 
 function App(props) {
   
@@ -19,6 +20,7 @@ function App(props) {
             <Routes>
               <Route path='/' element={<Profile/>}/>
               <Route path='/dialogs/*' element={<DialogsContiner/>}/>
+              <Route path='/users/' element={<UsersContiner/>}/>
               <Route path='/news' element={<News/>}/>
               <Route path='/music' element={<Music/>}/>
               <Route path='/settings' element={<Dialogs/>}/>
