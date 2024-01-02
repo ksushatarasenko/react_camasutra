@@ -1,31 +1,22 @@
 import React from 'react'
 import user from './users.module.css'
+import axios from 'axios'
+import userImg from '../../images/1636565361_2-sobakovod-club-p-sobaki-doberman-dlya-avatarki-3.jpg'
 
 function Users(props) {
     console.log(props)
-    // if(props.users.length === 0){
-    //     props.setUsers(
-    //         [
-    //             { id: 1, photoUrl:'', fololowed: false, name:"Petr", status: 'I am a boss', location: {city: 'Oster', country: 'Ukraine'}},
-    //             { id: 2, photoUrl:'', fololowed: true,name:"Oksana", status: 'I am a boss', location: {city: 'Oksana', country: 'Ukraine'}},
-    //             { id: 3, photoUrl:'', fololowed: true, name:"Katya", status: 'I am a boss', location: {city: 'Chernihov', country: 'Ukraine'}},
-    //             { id: 4, photoUrl:'', fololowed: false, name:"Maryna", status: 'I am a boss', location: {city: 'Chernihov', country: 'Ukraine'}},
-    //             { id: 5, photoUrl:'', fololowed: true, name:"Kyrylo", status: 'I am a boss', location: {city: 'Lutava', country: 'Ukraine'}},
-    //             { id: 6, photoUrl:'', fololowed: true, name:"Ivan", status: 'I am a boss', location: {city: '', country: ''}},
-    //             { id: 7, photoUrl:'', fololowed: false, name:"Ira", status: 'I am a boss', location: {city: '', country: ''}},
-    //             { id: 8, photoUrl:'', fololowed: true, name:"Maria", status: 'I am a boss', location: {city: '', country: ''}},
-    //             { id: 9, photoUrl:'', fololowed: false, name:"Igor", status: 'I am a boss', location: {city: '', country: ''}},
-            
-    //           ]
-    //     )
-    // }
+    if(props.users.length === 0){
+        axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
+            props.setUsers(response.data.items)
+        })
+    }
 
   return (
     <div className={user.wrapper}>
         {
             props.users.map(u => <div key={u.id} className={user.continer}>
                 <span>
-                    <div><img src={u.photoUrl} alt="" /></div>
+                    <div><img src={u.photos.small != null ? u.photos.small : userImg} alt="" /></div>
                     <div><button>Follow</button></div>
                 </span>
                 <span>
@@ -34,8 +25,8 @@ function Users(props) {
                         <div>{u.status}</div>
                     </span>
                     <span>
-                        <div>{u.location.country}</div>
-                        <div>{u.location.city}</div>
+                        <div>{'u.location.country'}</div>
+                        <div>{'u.location.city'}</div>
                     </span>
                 </span>
             </div>)

@@ -4,15 +4,15 @@ const  SET_USERS = 'SET_USERS';
 
 let initionalState = {
   users: [
-    { id: 1, photoUrl:'https://c0.klipartz.com/pngpicture/639/452/gratis-png-iconos-de-computadora-avatar-perfil-de-usuario-icono-de-personas.png', fololowed: false, name:"Petr", status: 'I am a boss', location: {city: 'Oster', country: 'Ukraine'}},
-    { id: 2, photoUrl:'https://c0.klipartz.com/pngpicture/639/452/gratis-png-iconos-de-computadora-avatar-perfil-de-usuario-icono-de-personas.png', fololowed: true,name:"Oksana", status: 'I am a boss', location: {city: 'Oksana', country: 'Ukraine'}},
-    { id: 3, photoUrl:'https://c0.klipartz.com/pngpicture/639/452/gratis-png-iconos-de-computadora-avatar-perfil-de-usuario-icono-de-personas.png', fololowed: true, name:"Katya", status: 'I am a boss', location: {city: 'Chernihov', country: 'Ukraine'}},
-    { id: 4, photoUrl:'https://c0.klipartz.com/pngpicture/639/452/gratis-png-iconos-de-computadora-avatar-perfil-de-usuario-icono-de-personas.png', fololowed: false, name:"Maryna", status: 'I am a boss', location: {city: 'Chernihov', country: 'Ukraine'}},
-    { id: 5, photoUrl:'https://c0.klipartz.com/pngpicture/639/452/gratis-png-iconos-de-computadora-avatar-perfil-de-usuario-icono-de-personas.png', fololowed: true, name:"Kyrylo", status: 'I am a boss', location: {city: 'Lutava', country: 'Ukraine'}},
-    { id: 6, photoUrl:'https://c0.klipartz.com/pngpicture/639/452/gratis-png-iconos-de-computadora-avatar-perfil-de-usuario-icono-de-personas.png', fololowed: true, name:"Ivan", status: 'I am a boss', location: {city: '', country: ''}},
-    { id: 7, photoUrl:'https://c0.klipartz.com/pngpicture/639/452/gratis-png-iconos-de-computadora-avatar-perfil-de-usuario-icono-de-personas.png', fololowed: false, name:"Ira", status: 'I am a boss', location: {city: '', country: ''}},
-    { id: 8, photoUrl:'https://c0.klipartz.com/pngpicture/639/452/gratis-png-iconos-de-computadora-avatar-perfil-de-usuario-icono-de-personas.png', fololowed: true, name:"Maria", status: 'I am a boss', location: {city: '', country: ''}},
-    { id: 9, photoUrl:'https://c0.klipartz.com/pngpicture/639/452/gratis-png-iconos-de-computadora-avatar-perfil-de-usuario-icono-de-personas.png', fololowed: false, name:"Igor", status: 'I am a boss', location: {city: '', country: ''}},
+    // { id: 1, photoUrl:'https://c0.klipartz.com/pngpicture/639/452/gratis-png-iconos-de-computadora-avatar-perfil-de-usuario-icono-de-personas.png', fololowed: false, name:"Petr", status: 'I am a boss', location: {city: 'Oster', country: 'Ukraine'}},
+    // { id: 2, photoUrl:'https://c0.klipartz.com/pngpicture/639/452/gratis-png-iconos-de-computadora-avatar-perfil-de-usuario-icono-de-personas.png', fololowed: true,name:"Oksana", status: 'I am a boss', location: {city: 'Oksana', country: 'Ukraine'}},
+    // { id: 3, photoUrl:'https://c0.klipartz.com/pngpicture/639/452/gratis-png-iconos-de-computadora-avatar-perfil-de-usuario-icono-de-personas.png', fololowed: true, name:"Katya", status: 'I am a boss', location: {city: 'Chernihov', country: 'Ukraine'}},
+    // { id: 4, photoUrl:'https://c0.klipartz.com/pngpicture/639/452/gratis-png-iconos-de-computadora-avatar-perfil-de-usuario-icono-de-personas.png', fololowed: false, name:"Maryna", status: 'I am a boss', location: {city: 'Chernihov', country: 'Ukraine'}},
+    // { id: 5, photoUrl:'https://c0.klipartz.com/pngpicture/639/452/gratis-png-iconos-de-computadora-avatar-perfil-de-usuario-icono-de-personas.png', fololowed: true, name:"Kyrylo", status: 'I am a boss', location: {city: 'Lutava', country: 'Ukraine'}},
+    // { id: 6, photoUrl:'https://c0.klipartz.com/pngpicture/639/452/gratis-png-iconos-de-computadora-avatar-perfil-de-usuario-icono-de-personas.png', fololowed: true, name:"Ivan", status: 'I am a boss', location: {city: '', country: ''}},
+    // { id: 7, photoUrl:'https://c0.klipartz.com/pngpicture/639/452/gratis-png-iconos-de-computadora-avatar-perfil-de-usuario-icono-de-personas.png', fololowed: false, name:"Ira", status: 'I am a boss', location: {city: '', country: ''}},
+    // { id: 8, photoUrl:'https://c0.klipartz.com/pngpicture/639/452/gratis-png-iconos-de-computadora-avatar-perfil-de-usuario-icono-de-personas.png', fololowed: true, name:"Maria", status: 'I am a boss', location: {city: '', country: ''}},
+    // { id: 9, photoUrl:'https://c0.klipartz.com/pngpicture/639/452/gratis-png-iconos-de-computadora-avatar-perfil-de-usuario-icono-de-personas.png', fololowed: false, name:"Igor", status: 'I am a boss', location: {city: '', country: ''}},
 
   ],
  
